@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sftcurate"
+version = "0.1.0"
+description = "Near-duplicate detection for instruction-tuning datasets, with an honest account of what the similarity threshold actually decides."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kyle Riccardi", email = "kylericcardi99@gmail.com" }]
+keywords = ["deduplication", "minhash", "fine-tuning", "sft", "dataset-curation", "llm"]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/Kric123/sft-curation"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
